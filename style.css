@@ -1,4 +1,7 @@
-*{
+/*=============================================================
+                Basic css property and values
+===============================================================*/
+* {
     font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
     text-decoration: none;
@@ -8,28 +11,31 @@
     box-sizing: border-box;
 }
 
-:root{
+*::selection {
+    background: var(--yellow);
+    color: #fff;
+}
+
+html {
+    font-size: 100%;
+}
+
+/*=============================================================
+                css variables
+===============================================================*/
+:root {
     --yellow: #f5ae20;
     --white: #FFFFFF;
     --text: #1f1f1f;
 }
 
-*::selection{
-    background: var(--yellow);
-    color: #fff;
-}
 
 
-html{
-    font-size: 100%;
-}
-
-
-
-
-/* header section design  */
-.header{
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url(img/header.jpg);
+/*=============================================================
+                Header section design
+===============================================================*/
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.7)), url(img/header.jpg);
     min-height: 80vh;
     background-position: center;
     background-size: cover;
@@ -37,7 +43,7 @@ html{
     position: relative;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,7 +51,7 @@ html{
     padding: 0 10%;
 }
 
-.navbar .nav-logo{
+.navbar .nav-logo {
     font-size: 35px;
     color: transparent;
     font-family: cursive;
@@ -54,23 +60,24 @@ html{
 
 }
 
-.navbar .nav-logo .fa-car{
+.navbar .nav-logo .fa-car {
     margin-left: 8px;
     color: var(--yellow);
 }
-.navbar ul{
+
+.navbar ul {
     flex: 1;
     text-align: right;
     position: relative;
     transition: 0.45s;
 }
 
-.navbar ul li{
+.navbar ul li {
     display: inline-block;
     margin-left: 30px;
 }
 
-.navbar a{
+.navbar a {
     color: var(--white);
     font-size: 16px;
     text-transform: uppercase;
@@ -78,12 +85,12 @@ html{
 }
 
 .navbar a.nav-link:hover,
-.navbar a.active{
+.navbar a.active {
     color: transparent;
     -webkit-text-stroke: 0.5px var(--yellow);
 }
 
-.btn{
+.btn {
     padding: 8px 25px;
     border: 0;
     outline: none;
@@ -96,23 +103,24 @@ html{
     display: inline-block;
 }
 
-.main-btn{
+.main-btn {
     background: var(--yellow);
     color: var(--text);
 }
-.main-btn:hover{
+
+.main-btn:hover {
     background: transparent;
     border: 2px solid var(--yellow);
     color: var(--yellow);
 }
 
-#menu{
+#menu {
     color: var(--white);
     font-size: 35px;
     display: none;
 }
 
-#close{
+#close {
     font-size: 35px;
     color: var(--white);
     display: block;
@@ -122,7 +130,7 @@ html{
     display: none;
 }
 
-.hero-text h1{
+.hero-text h1 {
     color: var(--white);
     font-size: 55px;
     font-weight: 500;
@@ -132,11 +140,11 @@ html{
     text-transform: capitalize;
 }
 
-.text-yellow{
+.text-yellow {
     color: var(--yellow);
 }
 
-.header-form{
+.header-form {
     position: absolute;
     top: 300px;
     max-width: 1040px;
@@ -147,7 +155,7 @@ html{
     margin-bottom: 40px;
 }
 
-.form-text{
+.form-text {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -157,15 +165,15 @@ html{
 }
 
 
-.header-form .row{
+.header-form .row {
     background: #fff;
     display: flex;
     /* justify-content: space-between; */
 }
 
-.header-form .form-img{
+.header-form .form-img {
     flex-basis: 30%;
-    background: linear-gradient(rgba(253, 195, 5, 0.9),rgba(253, 195, 5, 0.9)),url(img/aditional.jpg);
+    background: linear-gradient(rgba(253, 195, 5, 0.9), rgba(253, 195, 5, 0.9)), url(img/aditional.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -173,48 +181,50 @@ html{
     padding: 40px 20px;
 }
 
-.container{
+.container {
     width: 100%;
     max-width: 1040px;
     margin: 0 auto;
 }
 
-.first-h4{
+.first-h4 {
     font-size: 22px;
 }
 
-.form-text h1{
+.form-text h1 {
     font-size: 55px;
 }
-.form-text h2{
+
+.form-text h2 {
     font-size: 75px;
     color: black;
     font-weight: 700;
     line-height: 80px;
 }
 
-.second-h4{
+.second-h4 {
     font-size: 22px;
     font-weight: 400;
 }
 
-form{
+form {
     flex-basis: 35%;
     padding: 20px;
 }
 
-form .form-item{
+form .form-item {
     margin-bottom: 20px;
 }
 
-form label{
+form label {
     display: block;
     color: var(--text);
     font-size: 14px;
     font-weight: 400;
     margin-bottom: 8px;
 }
-form input{
+
+form input {
     display: block;
     width: 100%;
     border: 1px solid var(--yellow);
@@ -223,29 +233,33 @@ form input{
     border-radius: 8px;
 }
 
-.condition-pera{
+.condition-pera {
     color: var(--text);
     font-size: 12px;
     line-height: 18px;
 }
 
-form .btn.main-btn:hover{
+form .btn.main-btn:hover {
     background: var(--yellow);
     color: var(--text);
 }
 
-.services{
+/*=============================================================
+                Service section design
+===============================================================*/
+
+.services {
     padding: 50px 0 30px;
 }
 
-.services .service-row{
+.services .service-row {
     margin-top: 240px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
 }
 
-.service-col{
+.service-col {
     text-align: center;
     border: 1px solid rgba(25, 25, 25, 0.3);
     padding: 30px 20px;
@@ -253,36 +267,37 @@ form .btn.main-btn:hover{
     border-radius: 6px;
     transition: 0.3s;
 }
-.service-col:hover{
+
+.service-col:hover {
     border: 1px solid rgb(25, 25, 25);
 }
 
-.service-col i{
+.service-col i {
     font-size: 55px;
     color: var(--yellow);
 }
 
-.service-title{
+.service-title {
     font-size: 25px;
     color: var(--text);
     margin-top: 6px;
     text-transform: uppercase;
 }
 
-.sub-service-title{
+.sub-service-title {
     color: #c8c9cc;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 6px;
 }
 
-.service-pera{
+.service-pera {
     color: var(--text);
     font-size: 14px;
     text-transform: none;
 }
 
-.service-col label{
+.service-col label {
     color: var(--text);
     font-size: 16px;
     display: block;
@@ -290,30 +305,34 @@ form .btn.main-btn:hover{
     font-weight: 700;
 }
 
-.priceValue{
+.priceValue {
     color: var(--yellow);
     font-size: 45px;
     font-weight: 700;
 }
 
-.priceValue span{
+.priceValue span {
     font-size: 12px;
     margin-left: -16px;
 }
 
-.preview-client{
+/*=============================================================
+                Preview section design
+===============================================================*/
+.preview-client {
     background: var(--text);
     padding: 60px 0;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(3, 1fr);
 }
+
 .haapyClirnts,
 .ofYears,
-.drivers{
+.drivers {
     color: var(--white);
     text-align: center;
     border: 1px solid #ffffffa8;
@@ -321,89 +340,100 @@ form .btn.main-btn:hover{
     border-radius: 8px;
 }
 
-.preview-client h4{
+.preview-client h4 {
     font-size: 45px;
     font-weight: 700;
 }
-.preview-client p{
+
+.preview-client p {
     font-size: 18px;
     font-weight: 500;
     margin-top: -4px;
 }
 
-.our-apps{
+/*=============================================================
+                Apps section design
+===============================================================*/
+.our-apps {
     padding: 100px 0;
     background: var(--yellow);
 }
 
-.apps-flex{
+.apps-flex {
     display: flex;
     align-items: center;
 }
 
-.apps-info{
+.apps-info {
     flex-basis: 50%;
     color: var(--text);
     padding-right: 30px;
 }
 
-.apps-info h2{
+.apps-info h2 {
     font-size: 50px;
     line-height: 80px;
     font-weight: 600;
 }
-.apps-info p{
+
+.apps-info p {
     font-size: 16px;
     line-height: 20px;
     text-align: justify;
 }
-.apps-img{
+
+.apps-img {
     flex-basis: 50%;
     border-radius: 8px;
 }
 
-.apps-img img{
+.apps-img img {
     width: 100%;
     vertical-align: middle;
     border-radius: 8px;
 }
 
-.download-btn{
+.download-btn {
     background: var(--white);
     margin-top: 20px;
     color: var(--text);
     font-weight: 700;
 }
 
-.blog-section{
+/*=============================================================
+                Blog section design
+===============================================================*/
+.blog-section {
     background: var(--white);
     padding: 100px 0;
 }
 
-.section-heading{
+.section-heading {
     text-align: center;
     margin-bottom: 40px;
 }
 
-.section-heading h2{
+.section-heading h2 {
     font-size: 40px;
     color: var(--text);
 }
-.blog-flex{
+
+.blog-flex {
     display: flex;
 }
 
-.blog-col{
+.blog-col {
     background: var(--white);
     padding: 0 0 30px 0;
     box-shadow: 0 3px 12px rgba(25, 25, 25, 0.3);
 }
-.blog-img{
+
+.blog-img {
     width: 100%;
     max-height: 450px;
 }
 
-.blog-img img{
+.blog-img img {
     width: 100%;
     height: 350px;
     object-fit: cover;
@@ -411,49 +441,53 @@ form .btn.main-btn:hover{
 
 }
 
-.blog-info{
+.blog-info {
     padding: 10px 20px 0;
 }
-.first-blog{
+
+.first-blog {
     margin-right: 30px;
 }
 
-.admin{
+.admin {
     color: var(--text);
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 8px;
 }
 
-.admin a{
+.admin a {
     color: rgb(38, 103, 232);
     font-style: italic;
 }
 
-.blog-paragraph{
+.blog-paragraph {
     color: var(--text);
     line-height: 22px;
     font-size: 14px;
 }
 
-.blogBtnBox{
+.blogBtnBox {
     text-align: center;
     margin-top: 40px;
 }
 
-.blogBtnBox .btn.main-btn{
+.blogBtnBox .btn.main-btn {
     box-shadow: 0 3px 12px rgba(25, 25, 25, 0.3);
     padding: 16px 35px;
     position: relative;
 }
 
 
-.blogBtnBox .btn.main-btn:hover{
+.blogBtnBox .btn.main-btn:hover {
     color: var(--text);
     border: 2px solid var(--text);
 }
 
-footer{
+/*=============================================================
+                Footer section design
+===============================================================*/
+footer {
     padding: 15px 0;
     background: var(--yellow);
     text-align: center;
